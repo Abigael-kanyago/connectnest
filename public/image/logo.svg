@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="85 75 230 230" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="cnTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#255152" />
+      <stop offset="100%" stop-color="#173738" />
+    </linearGradient>
+    <linearGradient id="cnTerracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F28468" />
+      <stop offset="100%" stop-color="#D95D39" />
+    </linearGradient>
+    <linearGradient id="cnNestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6AA6E" />
+      <stop offset="50%" stop-color="#E28743" />
+      <stop offset="100%" stop-color="#B3541E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Arch Ring -->
+  <path 
+    d="M 116 172 A 98 98 0 1 1 274 172" 
+    stroke="#224F50" 
+    stroke-width="6" 
+    stroke-linecap="round" 
+    fill="none" 
+  />
+
+  <!-- Sprout Stem -->
+  <path 
+    d="M 260 156 Q 282 130 273 95" 
+    stroke="#E27357" 
+    stroke-width="5" 
+    stroke-linecap="round" 
+    fill="none" 
+  />
+  <!-- Top Leaf -->
+  <path 
+    d="M 273 95 C 265 80 248 83 248 98 C 248 113 266 114 273 95 Z" 
+    fill="#E27357" 
+  />
+  <!-- Side Leaf -->
+  <path 
+    d="M 268 124 C 254 116 237 122 241 135 C 245 146 262 141 268 124 Z" 
+    fill="#E27357" 
+  />
+
+  <!-- Left Adult Figure (Teal) -->
+  <circle cx="160" cy="134" r="18" fill="url(#cnTealGrad)" />
+  <path 
+    d="M 160 156 C 128 156 118 186 123 212 C 128 238 158 258 196 280 C 174 259 150 238 150 207 C 150 186 161 169 178 163 C 172 158 166 156 160 156 Z" 
+    fill="url(#cnTealGrad)" 
+  />
+
+  <!-- Right Adult Figure (Terracotta) -->
+  <circle cx="238" cy="144" r="16" fill="url(#cnTerracottaGrad)" />
+  <path 
+    d="M 238 164 C 264 164 274 189 270 212 C 265 237 236 258 196 280 C 217 259 238 238 238 207 C 238 188 227 172 211 166 C 220 164 229 164 238 164 Z" 
+    fill="url(#cnTerracottaGrad)" 
+  />
+
+  <!-- Center Child Figure (Warm Terracotta) -->
+  <circle cx="196" cy="202" r="12" fill="url(#cnTerracottaGrad)" />
+  <path 
+    d="M 196 218 C 184 218 174 229 174 246 C 182 250 190 252 196 252 C 202 252 210 250 218 246 C 218 229 208 218 196 218 Z" 
+    fill="url(#cnTerracottaGrad)" 
+  />
+
+  <!-- Nest Base Swooshes -->
+  <!-- Left Wing Base -->
+  <path 
+    d="M 96 176 C 94 204 108 238 134 259 C 160 279 186 287 212 288 C 175 281 144 265 123 243 C 105 223 99 196 101 176 Z" 
+    fill="#224F50" 
+  />
+  <!-- Right Wing Base -->
+  <path 
+    d="M 300 170 C 300 197 290 226 269 249 C 248 271 219 283 188 288 C 221 283 250 268 271 245 C 290 223 296 194 296 170 Z" 
+    fill="#224F50" 
+  />
+
+  <!-- Main Warm Terracotta/Amber Nest Cradle -->
+  <path 
+    d="M 100 206 C 111 250 149 290 200 296 C 251 290 289 250 300 206 C 286 255 245 285 200 285 C 155 285 114 255 100 206 Z" 
+    fill="url(#cnNestGrad)" 
+  />
+  <!-- Bottom Accent Shadow -->
+  <path 
+    d="M 130 259 C 154 282 180 291 215 291 C 250 291 273 280 288 263 C 267 280 241 287 212 287 C 177 287 148 276 130 259 Z" 
+    fill="#A45524" 
+  />
+</svg>
