@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ConnectNest 🪺
+### Neuro-Affirming Pediatric Support Network
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Supabase](https://img.shields.io/badge/Supabase-Auth_%26_DB-3ECF8E?style=flat-square&logo=supabase)](https://supabase.com/)
 
-First, run the development server:
+**ConnectNest** is a modern, compassionate web platform designed to bridge the gap between families with neurodivergent children and verified, specialized pediatric support providers (speech therapists, occupational therapists, behavioral specialists, and developmental educators).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🌟 Key Features
+
+### 👨‍👩‍👧 For Parents & Caregivers
+- **Personalized Child Profiles**: Detail sensory preferences, diagnosis tags (Autism, ADHD, SPD, etc.), interests, and specific therapy requirements.
+- **Tailored Matching Queue**: Submit specialized service requests with preferred session modes (in-person, online, or hybrid).
+- **Session Tracking & Management**: Manage appointments, communicate with providers, and monitor session statuses.
+
+### 🩺 For Providers & Specialists
+- **Seamless Onboarding**: Submit credentials, professional license details, and CV documentation.
+- **Profile & Availability Management**: Define hourly rates, service specialties, bio, and weekly availability slots.
+- **Direct Parent Connections**: Receive matched sessions once vetted and approved by administrators.
+
+### 🛡️ For Administrators
+- **Vetting & Verification Queue**: Review provider qualifications, inspect uploaded licenses and CVs, and verify provider profiles.
+- **Smart Allocation Engine**: Review parent service requests and assign the most suitable, vetted providers.
+- **Platform Analytics**: Monitor overall user activity, session completions, and support inquiries.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 16 (App Router), React 19, TypeScript
+- **Styling & UI**: Tailwind CSS v4, Framer Motion, Lucide React Icons
+- **Backend & Database**: Supabase (PostgreSQL, Row Level Security, Auth, Storage)
+- **State & Server Actions**: Next.js Server Components, SSR Cookie Authentication
+
+---
+
+## 📁 Project Structure
+
+```text
+connectnest/
+├── public/               # Static assets & brand media
+├── src/
+│   ├── app/
+│   │   ├── (dashboard)/  # Role-based protected dashboards (Parent, Provider, Admin)
+│   │   ├── (public)/     # Public marketing, directory, and auth routes
+│   │   ├── layout.tsx    # Root application layout
+│   │   └── globals.css   # Theme variables and global styles
+│   ├── components/       # Reusable UI elements (Navbar, Footer, Modals, Cards)
+│   ├── lib/              # Supabase SSR client utilities & helper functions
+│   ├── types/            # TypeScript schemas and database types
+│   └── middleware.ts     # Auth routing and session refresh middleware
+├── supabase/
+│   └── schema.sql        # Database schema, tables, triggers, and RLS policies
+└── package.json          # Project configuration and dependencies
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone the repository
+```bash
+git clone https://github.com/Abigael-kanyago/connectnest.git
+cd connectnest
+```
 
-## Learn More
+### 2. Install dependencies
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Configure Environment Variables
+Create a `.env.local` file in the root directory and populate your Supabase credentials:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Database Setup
+Execute the SQL schema in [**`supabase/schema.sql`**](supabase/schema.sql) in your Supabase SQL Editor to initialize:
+- Custom ENUM types (`user_role`, `session_mode_type`, `request_status_type`, `session_status_type`)
+- Tables (`profiles`, `parent_profiles`, `provider_profiles`, `parent_requests`, `sessions`, `inquiries`)
+- Row Level Security (RLS) policies and automated timestamp triggers.
 
-## Deploy on Vercel
+### 5. Run the Development Server
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📄 License
+This project is licensed under the MIT License.
