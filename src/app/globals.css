@@ -27,6 +27,7 @@
   --slate-teal-700: #15393b;
   --slate-teal-800: #122f30;
   --slate-teal-900: #0f2728;
+  --slate-teal-950: #081718;
 
   /* Calming Teal Theme */
   --teal-50: #f0fdfa;
@@ -80,6 +81,7 @@
   --color-slate-teal-700: var(--slate-teal-700);
   --color-slate-teal-800: var(--slate-teal-800);
   --color-slate-teal-900: var(--slate-teal-900);
+  --color-slate-teal-950: var(--slate-teal-950);
 
   --color-teal-50: var(--teal-50);
   --color-teal-100: var(--teal-100);
@@ -202,6 +204,43 @@ body {
 /* Image Utilities for Gallery */
 .image-glow {
   filter: drop-shadow(0 10px 25px rgba(200, 109, 68, 0.25));
+}
+
+/* 3D Flip Photo Gallery Utilities */
+.perspective-container {
+  perspective: 1600px;
+  -webkit-perspective: 1600px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.95s cubic-bezier(0.34, 1.25, 0.64, 1);
+  will-change: transform;
+}
+
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.flip-card-face-back {
+  transform: rotateY(180deg);
 }
 
 

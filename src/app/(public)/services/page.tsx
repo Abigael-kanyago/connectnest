@@ -30,7 +30,8 @@ export default function ServicesPage() {
       title: "Speech & Language Pathology",
       subtitle: "Communication & Expression",
       icon: MessageSquare,
-      image: "/image/speech.png",
+      image: "/image/speech2.jpeg",
+      imagePos: "object-[center_25%]",
       desc: "For children working on verbal articulation, social-pragmatic language, AAC devices, or speech delays through gentle play therapy.",
       points: [
         "AAC Device Scaffolding",
@@ -47,7 +48,8 @@ export default function ServicesPage() {
       title: "Occupational Therapy (OT)",
       subtitle: "Sensory & Motor Integration",
       icon: Hand,
-      image: "/image/ot.png",
+      image: "/image/ot.jpeg",
+      imagePos: "object-[center_35%]",
       desc: "Gross and fine motor development, sensory integration, and self-care skills validating sensory preferences without compliance pressure.",
       points: [
         "Fine Motor Skill Stacking",
@@ -64,7 +66,8 @@ export default function ServicesPage() {
       title: "Adaptive Homeschool & Tutoring",
       subtitle: "Strengths-Based Academics",
       icon: GraduationCap,
-      image: "/image/homeschooling.png",
+      image: "/image/home.jpeg",
+      imagePos: "object-[center_20%]",
       desc: "Specialized educators adapting lessons to ADHD, Dyslexia, and Autistic learning styles structured around children's special interests.",
       points: [
         "Special Interest Curriculum",
@@ -81,7 +84,8 @@ export default function ServicesPage() {
       title: "Behavioral & Social Coaching",
       subtitle: "Self-Advocacy & Emotional Regulation",
       icon: Brain,
-      image: "/image/bs.png",
+      image: "/image/ott.jpeg",
+      imagePos: "object-[center_40%]",
       desc: "Positive-reinforcement coaching focused on building emotional self-regulation, identifying triggers, and authentic social connection.",
       points: [
         "Collaborative Problem Solving",
@@ -96,14 +100,15 @@ export default function ServicesPage() {
     {
       id: "activity",
       title: "Physical & Adaptive Sports",
-      subtitle: "Motor Skills & Courage",
+      subtitle: "Hydrotherapy & Motor Skills",
       icon: Activity,
-      image: "/image/activity.png",
-      desc: "Confidence-building sports coaches guiding children through rock wall climbing, sensory gym swings, and gross motor coordination.",
+      image: "/image/swimmo.jpeg",
+      imagePos: "object-[center_45%]",
+      desc: "Confidence-building sports coaches guiding children through adaptive swimming, hydrotherapy, and gross motor coordination.",
       points: [
-        "Sensory Gym Climbing Walls",
+        "Adaptive Swim Coaching",
+        "Hydrotherapy & Water Safety",
         "Balance & Proprioception",
-        "Adaptive Sports Coaching",
         "Confidence & Courage Support"
       ],
       badge: "Adaptive Coach",
@@ -177,7 +182,7 @@ export default function ServicesPage() {
                   <img 
                     src={cat.image} 
                     alt={cat.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    className={`w-full h-full object-cover ${cat.imagePos || "object-center"} group-hover:scale-105 transition-transform duration-500`} 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
                   
